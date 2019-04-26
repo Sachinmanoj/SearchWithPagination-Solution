@@ -12,7 +12,8 @@ export const searchForWord = (search = '', offset = 0, count = 5) => {
   return new Promise((resolve) => {
     timeout = setTimeout(() => {
       const searchResult = wordList[search] || getSearchResult(search) || [];
-      const result = searchResult.slice(offset, count); 
+      const end = offset + count;
+      const result = searchResult.slice(offset, end); 
       resolve(result);
     }, 1000);
   });
