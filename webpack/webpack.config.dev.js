@@ -15,7 +15,8 @@ module.exports = merge(common, {
   },
   plugins: [
     new Webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development')
+      'process.env.NODE_ENV': JSON.stringify('development'),
+      'searchLatency': JSON.stringify(1000),
     })
   ],
   module: {

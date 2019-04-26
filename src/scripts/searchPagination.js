@@ -1,6 +1,11 @@
 import { searchForWord } from "../algo/searchWord";
 import { showSearchResults } from "./searchResults";
 
+
+/**
+ * App state variables
+ * TODO: Add more state if required
+ */
 var searchData = [];
 var offset = 0;
 var count = 5;
