@@ -6,15 +6,19 @@ var offset = 0;
 var count = 5;
 var searchText = '';
 
-export const initSearchData = (value) => {
-  var searchData = [];
-  var offset = 0;
-  var count = 5;
+export const updateSearchText = (value) => {
   searchText = value;
 };
 
+export const clearSearchData = () => {
+  searchData = [];
+};
 
-export const doPaginationSearch = async () => {
+export const clearOffset = () => {
+  offset = 0;
+};
+
+export const doPaginationSearch = async (isNewSearch = false) => {
   let searchFor = searchText;
 
   /* 
@@ -31,12 +35,15 @@ export const doPaginationSearch = async () => {
    * offset - Start index
    * count - No.of search values to retreive
    */
+
+   if (isNewSearch) {
+    clearOffset();
+   }
  
   // CODE HERE ---
   const newData = await searchForWord(searchText, offset, count);
   const showLoadMore = true;
   searchData = newData;
-
 
   showSearchResults(searchData, showLoadMore, searchFor);
 };

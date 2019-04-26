@@ -1,9 +1,9 @@
 import '../styles/index.scss';
-import { doPaginationSearch, initSearchData } from './searchPagination';
+import { doPaginationSearch, updateSearchText } from './searchPagination';
 
 window.textSearch = function(searchText = '') {
   // Resets the search text and pagination controls
-  initSearchData(searchText);
+  updateSearchText(searchText);
 
   /* 
    * TODO: Optimize the search operation
@@ -13,7 +13,8 @@ window.textSearch = function(searchText = '') {
    */
  
   // CODE HERE ---
-  return (searchText !== '') ? doPaginationSearch(): null;
+  const isNewSearch = true;
+  return (searchText !== '') ? doPaginationSearch(isNewSearch): null;
 }
 
 window.loadMore = function () {
