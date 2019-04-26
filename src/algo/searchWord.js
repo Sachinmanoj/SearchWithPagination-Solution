@@ -1,3 +1,7 @@
+/**
+ * PROTECTED CODE - DONOT MODIFY 
+ * Search operation
+ */
 import wordList from '../constant/wordList';
 let timeout;
 
@@ -15,6 +19,6 @@ export const searchForWord = (search = '', offset = 0, count = 5) => {
       const end = offset + count;
       const result = searchResult.slice(offset, end); 
       resolve(result);
-    }, 1000);
+    }, searchLatency);
   });
 };
