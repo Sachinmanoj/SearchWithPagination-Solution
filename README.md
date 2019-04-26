@@ -1,9 +1,6 @@
-# Webpack Frontend Starterkit
+# Text search with pagination support - Boilerplate
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/wbkd/webpack-starter.svg)](https://greenkeeper.io/)
-
-A lightweight foundation for your next webpack based frontend project.
-
+A bolierplate to implement search optimization with pagination support
 
 ### Installation
 
